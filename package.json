@@ -1,0 +1,36 @@
+{
+  "name": "atsippy",
+  "type": "module",
+  "description": "A client for the Bluesky Jetstream (https://github.com/bluesky-social/jetstream) service.",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MPL-2.0",
+  "repository": "https://github.com/lukeacl/atsippy",
+  "homepage": "https://github.com/lukeacl/atsippy",
+  "keywords": [
+    "bluesky",
+    "jetstream",
+    "atproto",
+    "lukeacl"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "pnpm build",
+    "preinstall": "npx -y only-allow pnpm"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  }
+}
