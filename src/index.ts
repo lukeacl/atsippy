@@ -30,7 +30,7 @@ export class ATSippy extends EventEmitter {
   cursor?: number;
   endpoint: string = "wss://jetstream1.us-west.bsky.network/subscribe";
   reconnect: boolean = true;
-  reconnectDelay: number = 3;
+  reconnectDelay: number = 3000;
   useCompression: boolean = true;
   wantedCollections: string[] = [];
   wantedDIDs: string[] = [];
@@ -82,7 +82,7 @@ export class ATSippy extends EventEmitter {
         payload: {
           wantedCollections: this.wantedCollections,
           wantedDids: this.wantedDIDs,
-          maxMessageSizeBytes: 1000000,
+          maxMessageSizeBytes: 0,
         },
       }),
     );
@@ -163,7 +163,7 @@ export class ATSippy extends EventEmitter {
       setTimeout(() => {
         this.emit("reconnecting");
         this.connect();
-      }, this.reconnectDelay * 1000);
+      }, this.reconnectDelay);
   }
 }
 

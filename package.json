@@ -1,7 +1,7 @@
 {
   "name": "atsippy",
   "type": "module",
-  "description": "A client for the Bluesky Jetstream (https://github.com/bluesky-social/jetstream) service.",
+  "description": "A reconnecting compression supporting client for the Bluesky Jetstream (https://github.com/bluesky-social/jetstream) service.",
   "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

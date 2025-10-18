@@ -1,6 +1,6 @@
 # ATSippy
 
-A client for the Bluesky [Jetstream](https://github.com/bluesky-social/jetstream) service.
+A reconnecting compression supporting client for the Bluesky [Jetstream](https://github.com/bluesky-social/jetstream) service.
 
 ## Installation
 
@@ -15,6 +15,11 @@ import { ATSippy } from "atsippy";
 
 const sippy = new ATSippy();
 
+//sippy.cursor = 0;
+//sippy.endpoint = "wss://jetstream1.us-west.bsky.network/subscribe";
+//sippy.reconnect = true;
+//sippy.reconnectDelay = 3000;
+//sippy.useCompression = true;
 sippy.wantedCollections = ["app.bsky.actor.profile"];
 sippy.wantedDIDs = ["did:plc:mfl5calppp7zoa44zt6pymie"];
 
